@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 955372339d659be4aa6021d2a2722efb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - windManager: {fileID: 6911835377160025361, guid: a9345a485378010478b72c4934ce6d0a,
+      type: 3}
+  - windManagerScript: {fileID: 6911835377160025363, guid: a9345a485378010478b72c4934ce6d0a,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
