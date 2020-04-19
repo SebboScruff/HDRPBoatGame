@@ -16,6 +16,9 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
     public Image cannonCooldownBar;
     public TextMeshProUGUI LootText;
 
+    public Camera thirdPersonCam, firstPersonCam;
+    CameraModes currentCamMode = CameraModes.thirdPerson;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,12 +49,35 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
             base.Shoot(1);
         }
 
+        if(Input.GetAxis("CamChange") != 0)
+        {
+            if(currentCamMode == CameraModes.thirdPerson)
+            {
+                currentCamMode = CameraModes.firstPerson;
+            }
+            else { currentCamMode = CameraModes.thirdPerson; }
+        }
+
         //Debug.Log(fireCD);
 
         //UI UPDATE
         LootText.text = "Current Loot: " + lootAmount.ToString("00");
         healthBar.fillAmount = currentHP / maxHP;
         cannonCooldownBar.fillAmount = 1 - (fireCD / 5);
+
+        switch(currentCamMode)
+        {
+            case CameraModes.thirdPerson:
+                thirdPersonCam.gameObject.SetActive(true);
+                firstPersonCam.gameObject.SetActive(false);
+                break;
+            case CameraModes.firstPerson:
+                firstPersonCam.gameObject.SetActive(true);
+                thirdPersonCam.gameObject.SetActive(false);
+                break;
+            default:
+                break;
+        }
     }
 
     public override void Die()
@@ -61,5 +87,11 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
             Instantiate(treasureChestPrefab);
         }
         transform.position = spawnPos;
+    }
+
+    enum CameraModes
+    {
+        firstPerson,
+        thirdPerson
     }
 }
