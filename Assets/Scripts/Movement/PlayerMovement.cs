@@ -17,6 +17,7 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
     public TextMeshProUGUI LootText;
 
     public Camera thirdPersonCam, firstPersonCam;
+    private bool isCamAxisInUse = false;
     CameraModes currentCamMode = CameraModes.thirdPerson;
 
     // Start is called before the first frame update
@@ -49,13 +50,24 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
             base.Shoot(1);
         }
 
-        if(Input.GetAxis("CamChange") != 0)
+        if (Input.GetAxis("CamChange") != 0 && isCamAxisInUse == false)
         {
             if(currentCamMode == CameraModes.thirdPerson)
             {
                 currentCamMode = CameraModes.firstPerson;
+                isCamAxisInUse = true;
+
             }
-            else { currentCamMode = CameraModes.thirdPerson; }
+            else
+            { 
+                currentCamMode = CameraModes.thirdPerson;
+                isCamAxisInUse = true;
+
+            }
+        }
+        if(Input.GetAxis("CamChange") == 0)
+        {
+            isCamAxisInUse = false;
         }
 
         //Debug.Log(fireCD);
