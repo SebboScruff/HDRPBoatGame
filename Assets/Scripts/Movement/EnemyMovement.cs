@@ -26,5 +26,6 @@ public class EnemyMovement : BoatMovement
             //turn towards the player
             transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position);
         }
+
     }
 }
