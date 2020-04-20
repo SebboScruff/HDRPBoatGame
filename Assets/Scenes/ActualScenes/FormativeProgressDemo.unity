@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 731986393}
-  cloudMoveSpeed: 0.4
+  cloudMoveSpeed: 1
 --- !u!1001 &756504714
 PrefabInstance:
   m_ObjectHideFlags: 0
