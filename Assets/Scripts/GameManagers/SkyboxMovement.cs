@@ -15,7 +15,5 @@ public class SkyboxMovement : MonoBehaviour
         HDRISky sky;
         volume.profile.TryGet(out sky);
         sky.rotation.value += Time.deltaTime * cloudMoveSpeed;
-
-
     }
 }
