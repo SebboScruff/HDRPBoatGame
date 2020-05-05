@@ -67,6 +67,12 @@ public class BoatMovement : MonoBehaviour
         else { CancelInvoke(); } // if the cooldown is finished all calls to this method are stopped
     }
 
+    public void TakeDamage(int damageAmount)
+    {
+        currentHP -= damageAmount;
+    }
+
+
     public virtual void Die()
     {
         for(int i = 1; i <= lootAmount; i++)

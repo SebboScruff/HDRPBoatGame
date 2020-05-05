@@ -39,6 +39,9 @@ public class CannonballMovement : MonoBehaviour
                 case Boats.MERCHANT_1:
                     boatScript.Die();
                     break;
+                case Boats.PLAYER:
+                    boatScript.TakeDamage(20);
+                    break;
                 default:
                     break;
             }

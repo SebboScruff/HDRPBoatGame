@@ -22,10 +22,10 @@ public class WindManager : MonoBehaviour
     Vector3 newWindAngle;
 
     [Range(5, 10)]
-    public int minWindSpeed = 5;
+    public float minWindSpeed = 5f;
 
     [Range(11, 30)]
-    public int maxWindSpeed = 20;
+    public float maxWindSpeed = 20f;
 
     [Range(30, 90)]
     public int windChangeRate = 60;

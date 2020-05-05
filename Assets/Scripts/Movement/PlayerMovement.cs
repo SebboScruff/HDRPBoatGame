@@ -35,8 +35,9 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
         maxHP = 100;
         currentHP = maxHP;
 
-        isPaused = false;
-        pauseBG.gameObject.SetActive(false);
+        isPaused = true;
+        pauseBG.gameObject.SetActive(true);
+        Time.timeScale = 0;
     }
 
     // Update is called once per frame
@@ -112,15 +113,6 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
         }
         transform.position = spawnPos;
         currentHP = maxHP;
-    }
-
-    public void TakeDamage(int damageAmount)
-    {
-        currentHP -= damageAmount;
-        if(currentHP <= 0)
-        {
-            Die();
-        }
     }
 
     public void TogglePause()
