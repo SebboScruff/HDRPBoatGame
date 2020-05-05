@@ -20,6 +20,10 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
     private bool isCamAxisInUse = false;
     CameraModes currentCamMode = CameraModes.thirdPerson;
 
+    // Pause Screen Stuff
+    public RawImage pauseBG;
+    bool isPaused;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +34,9 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
         lootAmount = 0;
         maxHP = 100;
         currentHP = maxHP;
+
+        isPaused = false;
+        pauseBG.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -90,6 +97,11 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
             default:
                 break;
         }
+
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            TogglePause();
+        }
     }
 
     public override void Die()
@@ -99,6 +111,32 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
             Instantiate(treasureChestPrefab);
         }
         transform.position = spawnPos;
+        currentHP = maxHP;
+    }
+
+    public void TakeDamage(int damageAmount)
+    {
+        currentHP -= damageAmount;
+        if(currentHP <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void TogglePause()
+    {
+        if(isPaused == false)
+        {
+            pauseBG.gameObject.SetActive(true);
+            Time.timeScale = 0;
+            isPaused = true;
+        }
+        else
+        {
+            pauseBG.gameObject.SetActive(false);
+            Time.timeScale = 1;
+            isPaused = false;
+        }
     }
 
     enum CameraModes

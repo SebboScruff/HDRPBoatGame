@@ -49,8 +49,6 @@ public class BoatMovement : MonoBehaviour
         //Debug.Log(1 + Mathf.Cos(angleToWind));
 
         transform.Translate(Vector3.forward * (sailSetting * windManagerScript.WindSpeed * (1 + (Mathf.Cos(angleToWind))) * Time.deltaTime)); // constantly moves the player boat forwards relative to their angle to the wind
-
-
     }
 
     public void Shoot(int firingPointIndex)
@@ -76,7 +74,6 @@ public class BoatMovement : MonoBehaviour
             Instantiate(treasureChestPrefab, transform.position, transform.rotation);
         }
         Destroy(gameObject);
-
     }
 
     void OnTriggerEnter(Collider coll)

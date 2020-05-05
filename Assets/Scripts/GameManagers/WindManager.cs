@@ -30,6 +30,12 @@ public class WindManager : MonoBehaviour
     [Range(30, 90)]
     public int windChangeRate = 60;
 
+    // Storm Variables
+    bool isStormHappening = false;
+
+    public int minStormSpeed = 20;
+    public int maxStormSpeed = 50;
+
     // Start is called before the first frame update
     void Start()
     {

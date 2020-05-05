@@ -7,6 +7,7 @@ public class EnemyMovement : BoatMovement
     npcDetectionManager detectionManager;
 
     public GameObject player;
+    public Transform rayOrigin;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,8 @@ public class EnemyMovement : BoatMovement
     new void Update()
     {
         base.Update();
+
+        Debug.DrawRay(rayOrigin.position, Vector3.forward, Color.red);
 
         if (Vector3.Distance(transform.position, player.transform.position) < 75)
         {
