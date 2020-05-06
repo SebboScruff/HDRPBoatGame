@@ -28,6 +28,7 @@ public class BoatMovement : MonoBehaviour
     // LOOT VARIABLES
     public int lootAmount;
     public GameObject treasureChestPrefab;
+    public GameObject flotsamPrefab;
 
     //HP VARIABLES
     public float currentHP;
@@ -78,6 +79,10 @@ public class BoatMovement : MonoBehaviour
         for(int i = 1; i <= lootAmount; i++)
         {
             Instantiate(treasureChestPrefab, transform.position, transform.rotation);
+        }
+        for(int i = 0; i < Random.Range(1,4); i++)
+        {
+            Instantiate(flotsamPrefab, transform.position, transform.rotation);
         }
         Destroy(gameObject);
     }

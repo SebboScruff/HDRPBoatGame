@@ -104,6 +104,11 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
         {
             TogglePause();
         }
+
+        if(currentHP <= 0 )
+        {
+            Die();
+        }
     }
 
     public override void Die()
@@ -114,6 +119,7 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
         }
         transform.position = spawnPos;
         currentHP = maxHP;
+        lootAmount = 0;
     }
 
     public void TogglePause()
