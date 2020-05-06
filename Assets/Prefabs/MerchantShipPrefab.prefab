@@ -616,7 +616,7 @@ GameObject:
   - component: {fileID: 9012316312084721114}
   - component: {fileID: 7227769638840482563}
   m_Layer: 0
-  m_Name: MerchantShipPrefab1
+  m_Name: MerchantShipPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -631,7 +631,7 @@ Transform:
   m_GameObject: {fileID: 2543458050740583587}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -13.55466, y: 2.321272, z: 22.794327}
-  m_LocalScale: {x: 0.31570283, y: 0.31570283, z: 0.31570283}
+  m_LocalScale: {x: 0.80723, y: 0.80723, z: 0.80723}
   m_Children:
   - {fileID: 3728933360051959107}
   - {fileID: 2658142927360691603}
@@ -640,7 +640,7 @@ Transform:
   - {fileID: 3926236802517447771}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -177.617, z: 0}
 --- !u!114 &-2399859541379397078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,10 +653,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d656b0480a0c641bdf974eafdcb3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  windManager: {fileID: 6911835377160025361, guid: a9345a485378010478b72c4934ce6d0a,
-    type: 3}
-  windManagerScript: {fileID: 6911835377160025363, guid: a9345a485378010478b72c4934ce6d0a,
-    type: 3}
+  windManager: {fileID: 0}
+  windManagerScript: {fileID: 0}
   turnSpeed: 0
   firingPoints: []
   cannonballPrefab: {fileID: 0}
@@ -664,12 +662,13 @@ MonoBehaviour:
   lootAmount: 0
   treasureChestPrefab: {fileID: 856109907070374312, guid: 5ef49922b57fe6b4dbe9f75f9bed7bf2,
     type: 3}
+  flotsamPrefab: {fileID: 0}
   currentHP: 0
   maxHP: 0
   currentLives: 0
   maxLives: 0
-  player: {fileID: 0}
-  rayOrigin: {fileID: 0}
+  player: {fileID: 8433151021265862716, guid: 9f19a38527c7d744a81ec7a55a82c064, type: 3}
+  rayOrigin: {fileID: 3926236802517447771}
   detectionRayLength: 50
 --- !u!114 &-5242303609119810870
 MonoBehaviour:

@@ -956,7 +956,7 @@ GameObject:
   - component: {fileID: 8761593639325897915}
   - component: {fileID: 6019219379249603187}
   m_Layer: 0
-  m_Name: EnemyShip2
+  m_Name: EnemyShipPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1009,10 +1009,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38be54867baa99140b1cfc59fc5c9038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  windManager: {fileID: 5802371658158375187, guid: 3778b440c68a0124386c2b1f000056f0,
-    type: 3}
-  windManagerScript: {fileID: 5802371658158375185, guid: 3778b440c68a0124386c2b1f000056f0,
-    type: 3}
+  windManager: {fileID: 0}
+  windManagerScript: {fileID: 0}
   turnSpeed: 50
   firingPoints:
   - {fileID: 5645746101044218344}
@@ -1022,6 +1020,7 @@ MonoBehaviour:
   lootAmount: 0
   treasureChestPrefab: {fileID: 856109907070374312, guid: 5ef49922b57fe6b4dbe9f75f9bed7bf2,
     type: 3}
+  flotsamPrefab: {fileID: 0}
   currentHP: 0
   maxHP: 0
   currentLives: 0

@@ -33,7 +33,7 @@ public class WindManager : MonoBehaviour
     public int windChangeRate = 60;
 
     // Storm Variables
-    bool isStormHappening = false;
+    public bool isStormHappening = false;
 
     public int minStormSpeed = 20;
     public int maxStormSpeed = 50;

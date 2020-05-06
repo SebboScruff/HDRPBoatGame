@@ -40,6 +40,7 @@ public class BoatMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        windManager = GameObject.FindGameObjectWithTag("WindManager");
         windManagerScript = windManager.GetComponent<WindManager>();
     }
 

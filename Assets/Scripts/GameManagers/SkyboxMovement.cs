@@ -9,6 +9,8 @@ public class SkyboxMovement : MonoBehaviour
     public Volume volume;
     public float cloudMoveSpeed = 0.4f;
 
+    //public WindManager windManager;
+
     // Update is called once per frame
     void Update()
     {
