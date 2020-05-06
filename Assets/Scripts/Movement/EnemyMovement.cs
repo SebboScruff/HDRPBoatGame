@@ -28,11 +28,17 @@ public class EnemyMovement : BoatMovement
         base.Update();
 
         Debug.DrawRay(rayOrigin.position, rayOrigin.forward * detectionRayLength, Color.red);
-        if(Physics.Raycast(rayOrigin.position, rayOrigin.forward, out hit, detectionRayLength))
+        if(Physics.Raycast(rayOrigin.position, rayOrigin.forward, out hit, detectionRayLength) == true)
         {
-            if(hit.collider.tag == "Player")
+            Debug.Log("Enemy Ray Hit Something");
+
+            if(hit.collider.tag == "Player" && fireCD == 0)
             {
                 Shoot(0);
+            }
+            else if(hit.collider.tag == "Terrain")
+            {
+
             }
         }
 

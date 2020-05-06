@@ -276,15 +276,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7096763134117017327, guid: 4a86cf649ce37a247a4e9c3c77efa7b3,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5992749473277942673, guid: 4a86cf649ce37a247a4e9c3c77efa7b3,
         type: 3}
       propertyPath: m_Name
       value: gameGUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7096763134117017327, guid: 4a86cf649ce37a247a4e9c3c77efa7b3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5992749474470764949, guid: 4a86cf649ce37a247a4e9c3c77efa7b3,
         type: 3}
@@ -812,11 +812,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2109717551651617828, guid: 4452735c1a889884a97c1c2d70f2dca7,
-        type: 3}
-      propertyPath: m_Name
-      value: RayOriginGO
-      objectReference: {fileID: 0}
     - target: {fileID: 2543458050740583587, guid: 4452735c1a889884a97c1c2d70f2dca7,
         type: 3}
       propertyPath: m_Name
@@ -826,6 +821,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2109717551651617828, guid: 4452735c1a889884a97c1c2d70f2dca7,
+        type: 3}
+      propertyPath: m_Name
+      value: RayOriginGO
       objectReference: {fileID: 0}
     - target: {fileID: 1519811251325701808, guid: 4452735c1a889884a97c1c2d70f2dca7,
         type: 3}
@@ -1837,7 +1837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5402512561571025236}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1965,7 +1965,7 @@ GameObject:
   - component: {fileID: 583578759855057378}
   - component: {fileID: 1536533354424991000}
   - component: {fileID: 444927002742226150}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MainSail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2005,7 +2005,7 @@ GameObject:
   - component: {fileID: 7138678152672125852}
   - component: {fileID: 2845808969852946232}
   - component: {fileID: 2095761262419622112}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: TopSpokeIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2096,7 +2096,7 @@ GameObject:
   - component: {fileID: 7372952161628531884}
   - component: {fileID: 2934213079134654760}
   - component: {fileID: 7335133109196772004}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MastCrossbeam2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2285,13 +2285,27 @@ GameObject:
   - component: {fileID: 7252382603186777098}
   - component: {fileID: 7252382603186777099}
   - component: {fileID: 7252382603186777097}
-  m_Layer: 2
+  - component: {fileID: 1694565791319782672}
+  m_Layer: 0
   m_Name: PlayerBoat
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1694565791319782672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694565791319782671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1580643c396971846946171640e29304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boatType: 0
 --- !u!1 &1728263970616856608
 GameObject:
   m_ObjectHideFlags: 0
@@ -2303,7 +2317,7 @@ GameObject:
   - component: {fileID: 1205964940622299142}
   - component: {fileID: 1749396766484471561}
   - component: {fileID: 3502147929687819476}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MastCrossbeam2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2527,7 +2541,7 @@ GameObject:
   - component: {fileID: 832162250536991426}
   - component: {fileID: 5774366587422733980}
   - component: {fileID: 7102365309877781829}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WheelSpoke3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2588,7 +2602,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987267509107117610}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WheelSupport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2677,7 +2691,7 @@ GameObject:
   - component: {fileID: 4440801759952044842}
   - component: {fileID: 5131212076397496207}
   - component: {fileID: 1556574664758244149}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MizzenSail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2712,7 +2726,7 @@ GameObject:
   - component: {fileID: 1165304120082826303}
   - component: {fileID: 4211399305502802849}
   - component: {fileID: 1979172838439725735}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MainMast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2791,7 +2805,7 @@ GameObject:
   - component: {fileID: 1670714092762365717}
   - component: {fileID: 5792548892017575751}
   - component: {fileID: 7927548445789514313}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WheelStandSupport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2846,7 +2860,7 @@ GameObject:
   - component: {fileID: 2171468815569747536}
   - component: {fileID: 5171836412009098779}
   - component: {fileID: 554021436431385741}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WheelExterior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2864,7 +2878,7 @@ GameObject:
   - component: {fileID: 2745329651785474992}
   - component: {fileID: 5013696412042024601}
   - component: {fileID: 2224082032074014643}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: ForeMast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2882,7 +2896,7 @@ GameObject:
   - component: {fileID: 1200211539533611439}
   - component: {fileID: 7836016162667488336}
   - component: {fileID: 7199885489402021340}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WheelSpoke1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2916,7 +2930,7 @@ GameObject:
   - component: {fileID: 5610919324401929628}
   - component: {fileID: 6675499115861800908}
   - component: {fileID: 9118530761670133885}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MizzenMast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2934,7 +2948,7 @@ GameObject:
   - component: {fileID: 9166215955403305677}
   - component: {fileID: 1339982552755480289}
   - component: {fileID: 7808849030323323815}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WheelSpoke2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3117,7 +3131,7 @@ GameObject:
   - component: {fileID: 1022045668641839066}
   - component: {fileID: 796746869096395983}
   - component: {fileID: 5049810583907979965}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WheelCentre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3428,6 +3442,16 @@ PrefabInstance:
       propertyPath: rayOrigin
       value: 
       objectReference: {fileID: 5506224842401129054}
+    - target: {fileID: 8761593639325897915, guid: 29354e9e9470dae419ca9ad35539d5c1,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 33.718586
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761593639325897915, guid: 29354e9e9470dae419ca9ad35539d5c1,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -1.2977762
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29354e9e9470dae419ca9ad35539d5c1, type: 3}
 --- !u!4 &5506224842401129054 stripped
@@ -3488,7 +3512,7 @@ GameObject:
   - component: {fileID: 538098957945617647}
   - component: {fileID: 8191369996999170033}
   - component: {fileID: 3259233717206952151}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Hull_mk2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3514,7 +3538,7 @@ GameObject:
   - component: {fileID: 1635128702303353743}
   - component: {fileID: 7860079706812245589}
   - component: {fileID: 7364645138452529829}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WheelSpoke4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3532,7 +3556,7 @@ GameObject:
   - component: {fileID: 9043330643066857014}
   - component: {fileID: 5508211260511838281}
   - component: {fileID: 202779426110586707}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MastCrossbeam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3558,7 +3582,7 @@ GameObject:
   - component: {fileID: 8631625756233764439}
   - component: {fileID: 7941509054738817300}
   - component: {fileID: 1620458412113124289}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: ForeSail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3588,7 +3612,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3811237853040930876}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WholeWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3606,7 +3630,7 @@ GameObject:
   - component: {fileID: 4658458870263996191}
   - component: {fileID: 3277758261193340354}
   - component: {fileID: 4496338264106618045}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MastCrossbeam1 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3815,7 +3839,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &7252382603526589923
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,7 +3850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7252382603526589924}
   - component: {fileID: 7252382603526589925}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Wake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3951,7 +3975,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7252382603599778583}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WindArrowLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3981,7 +4005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7252382603952091719}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: FiringPointL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4011,7 +4035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7252382604273526725}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: FiringPointR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4350,7 +4374,7 @@ GameObject:
   - component: {fileID: 4826332796750693136}
   - component: {fileID: 525843633900194806}
   - component: {fileID: 2440977982355096011}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MastCrossbeam2 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4450,7 +4474,7 @@ GameObject:
   - component: {fileID: 7834271865892695944}
   - component: {fileID: 1359236221981899894}
   - component: {fileID: 4940838143385434739}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CannonL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4476,7 +4500,7 @@ GameObject:
   - component: {fileID: 5115123325360816064}
   - component: {fileID: 98626975067960042}
   - component: {fileID: 4675825103177412733}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WheelStandMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4945,7 +4969,7 @@ GameObject:
   - component: {fileID: 9040469269506721126}
   - component: {fileID: 8566706141919558696}
   - component: {fileID: 4173522703610838628}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: MastCrossbeam1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5056,7 +5080,7 @@ GameObject:
   - component: {fileID: 7613997856824496116}
   - component: {fileID: 2275374961949131450}
   - component: {fileID: 7141268129877437327}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: CannonR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5102,7 +5126,7 @@ GameObject:
   - component: {fileID: 922866229354891899}
   - component: {fileID: 6198249955275536806}
   - component: {fileID: 7973097151184389019}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: WheelStandBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
