@@ -38,7 +38,7 @@ public class EnemyMovement : BoatMovement
             }
             else if(hit.collider.tag == "Terrain")
             {
-
+                transform.rotation = Quaternion.LookRotation(transform.position - hit.point);
             }
         }
 
@@ -47,5 +47,7 @@ public class EnemyMovement : BoatMovement
             //turn towards the player
             transform.rotation = Quaternion.LookRotation(player.transform.position - transform.position);
         }
+
+        transform.eulerAngles = new Vector3(0f, transform.eulerAngles.y, 0f);
     }
 }

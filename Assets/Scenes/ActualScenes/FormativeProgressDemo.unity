@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 99861205}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3370,7 +3370,7 @@ PrefabInstance:
     - target: {fileID: 9174940320529836200, guid: 29354e9e9470dae419ca9ad35539d5c1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 797.1063
+      value: 783.2
       objectReference: {fileID: 0}
     - target: {fileID: 9174940320529836200, guid: 29354e9e9470dae419ca9ad35539d5c1,
         type: 3}
@@ -3385,22 +3385,22 @@ PrefabInstance:
     - target: {fileID: 9174940320529836200, guid: 29354e9e9470dae419ca9ad35539d5c1,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9174940320529836200, guid: 29354e9e9470dae419ca9ad35539d5c1,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.92806286
       objectReference: {fileID: 0}
     - target: {fileID: 9174940320529836200, guid: 29354e9e9470dae419ca9ad35539d5c1,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9174940320529836200, guid: 29354e9e9470dae419ca9ad35539d5c1,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.37242365
       objectReference: {fileID: 0}
     - target: {fileID: 9174940320529836200, guid: 29354e9e9470dae419ca9ad35539d5c1,
         type: 3}
@@ -3415,7 +3415,7 @@ PrefabInstance:
     - target: {fileID: 9174940320529836200, guid: 29354e9e9470dae419ca9ad35539d5c1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 136.27
       objectReference: {fileID: 0}
     - target: {fileID: 9174940320529836200, guid: 29354e9e9470dae419ca9ad35539d5c1,
         type: 3}
@@ -3451,6 +3451,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: -1.2977762
+      objectReference: {fileID: 0}
+    - target: {fileID: 6019219379249603187, guid: 29354e9e9470dae419ca9ad35539d5c1,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29354e9e9470dae419ca9ad35539d5c1, type: 3}

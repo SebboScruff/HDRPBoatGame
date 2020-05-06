@@ -388,6 +388,36 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &1661009074764923058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3926236802517447771}
+  m_Layer: 0
+  m_Name: mRayOriginGO
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3926236802517447771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661009074764923058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.24, z: 17.46}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1519811251325701808}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1902836414488760007
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +637,7 @@ Transform:
   - {fileID: 2658142927360691603}
   - {fileID: 12490068067219856}
   - {fileID: 3254147939952734266}
+  - {fileID: 3926236802517447771}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -638,6 +669,8 @@ MonoBehaviour:
   currentLives: 0
   maxLives: 0
   player: {fileID: 0}
+  rayOrigin: {fileID: 0}
+  detectionRayLength: 50
 --- !u!114 &-5242303609119810870
 MonoBehaviour:
   m_ObjectHideFlags: 0
