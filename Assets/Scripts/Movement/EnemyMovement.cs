@@ -27,7 +27,7 @@ public class EnemyMovement : BoatMovement
     {
         base.Update();
 
-        Debug.DrawRay(rayOrigin.position, rayOrigin.forward * detectionRayLength, Color.red);
+        //Debug.DrawRay(rayOrigin.position, rayOrigin.forward * detectionRayLength, Color.red);
         if(Physics.Raycast(rayOrigin.position, rayOrigin.forward, out hit, detectionRayLength) == true)
         {
             Debug.Log("Enemy Ray Hit Something");

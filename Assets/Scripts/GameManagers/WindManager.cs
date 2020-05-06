@@ -21,6 +21,8 @@ public class WindManager : MonoBehaviour
 
     Vector3 newWindAngle;
 
+    [Header("Wind Speeds")]
+
     [Range(5, 10)]
     public float minWindSpeed = 5f;
 

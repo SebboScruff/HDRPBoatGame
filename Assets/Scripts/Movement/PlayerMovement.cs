@@ -80,11 +80,12 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
 
         //Debug.Log(fireCD);
 
-        //UI UPDATE
+        // UI UPDATE
         LootText.text = "Current Loot: " + lootAmount.ToString("00");
         healthBar.fillAmount = currentHP / maxHP;
         cannonCooldownBar.fillAmount = 1 - (fireCD / 5);
 
+        // 
         switch(currentCamMode)
         {
             case CameraModes.thirdPerson:
