@@ -24,7 +24,7 @@ public class SkyboxMovement : MonoBehaviour
         }
         else
         {
-            sky.exposure.value = 0; // 0 exposure makes the sky brighter when it isn't a storm
+            sky.exposure.value = 1; // 0 exposure makes the sky brighter when it isn't a storm
         }
     }
 }
