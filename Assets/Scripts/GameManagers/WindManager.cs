@@ -29,21 +29,18 @@ public class WindManager : MonoBehaviour
     [Range(11, 30)]
     public float maxWindSpeed = 20f;
 
-    [Range(30, 90)]
-    private int windChangeRate = 60;
+    private int windChangeRate = 30;
     public int WindChangeRate
     {
         get { return windChangeRate; }
         set { windChangeRate = value; }
     }
 
-    // Storm Variables
-    private bool isStormHappening = false;
-    public bool IsStormHappening
-    {
-        get { return isStormHappening; }
-        set { isStormHappening = value; }
-    }
+    [Header("Storm Variables")]
+    [Range(0, 100)]
+    public int stormChance = 20;
+
+    [SerializeField]public bool isStormHappening = false;
 
     public int minStormSpeed = 20;
     public int maxStormSpeed = 50;
@@ -69,8 +66,23 @@ public class WindManager : MonoBehaviour
 
     void ChangeWind()
     {
+        int rnd = Random.Range(0, 100); // generate a random number to determine whether or not there is a storm
+        if(rnd < stormChance)
+        {
+            //storm happens
+            isStormHappening = true;
+            //Debug.Log("Storm is happening");
+            windSpeed = Random.Range(minStormSpeed, maxStormSpeed); // the minimum and maximum wind speeds during a storm are substantially higher, making all boats move faster
+        }
+        else
+        {
+            //storm does not happen
+            isStormHappening = false;
+            //Debug.Log("Storm is not happening");
+            windSpeed = Random.Range(minWindSpeed, maxWindSpeed); // sets the new wind speed to be a random float within the allocated range
+        }
+
         targetAngle = Random.Range(-179, 180); // sets a target angle anywhere within a full circle
-        windSpeed = Random.Range(minWindSpeed, maxWindSpeed); // sets the new wind speed to be a random float within the allocated range
         newWindAngle = new Vector3(0f, targetAngle, 0f); // sets the new wind angle to be a random float within the allocated range
         Vector3 change = (newWindAngle - transform.eulerAngles) / 10f; // ***UNUSED***
     }

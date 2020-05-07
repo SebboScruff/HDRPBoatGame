@@ -1105,6 +1105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: {fileID: 731986393}
   cloudMoveSpeed: 0.4
+  windManager: {fileID: 8678895354864473058}
 --- !u!82 &731986396
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2959,6 +2960,16 @@ PrefabInstance:
       propertyPath: relocator
       value: 
       objectReference: {fileID: 7252382603599778582}
+    - target: {fileID: 6474190262664941875, guid: a9345a485378010478b72c4934ce6d0a,
+        type: 3}
+      propertyPath: stormChance
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474190262664941875, guid: a9345a485378010478b72c4934ce6d0a,
+        type: 3}
+      propertyPath: minStormSpeed
+      value: 31
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9345a485378010478b72c4934ce6d0a, type: 3}
 --- !u!1001 &4423704933724605826
