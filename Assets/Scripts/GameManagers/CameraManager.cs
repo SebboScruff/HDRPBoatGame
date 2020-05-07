@@ -5,7 +5,12 @@ using UnityEngine;
 public class CameraManager : MonoBehaviour
 {
     [Range(1, 10)]
-    public float mouseSensitivity = 5f; // a variable to determine how much the camera moves per unit the mouse moves
+    [SerializeField]private float mouseSensitivity = 5f; // a variable to determine how much the camera moves per unit the mouse moves
+    public float MouseSensitivity
+    {
+        get { return mouseSensitivity; }
+        set { mouseSensitivity = value; }
+    }
 
     public GameObject thirdPersonFocus;
 
