@@ -26,6 +26,7 @@ public class BoatMovement : MonoBehaviour
 
     [Header("Shooting Variables")]
     public Transform[] firingPoints = new Transform[2]; // an array of transforms is used to show how many possible firing points a boat has
+    public ParticleSystem[] cannonParticles = new ParticleSystem[2];
     public GameObject cannonballPrefab;
     public float fireCD;
 
@@ -59,6 +60,7 @@ public class BoatMovement : MonoBehaviour
     public void Shoot(int firingPointIndex) // takes in an int which corresponds to an element in that boats Transform[] of firing points
     {
         Instantiate(cannonballPrefab, firingPoints[firingPointIndex].position, firingPoints[firingPointIndex].rotation); // spawns a cannonball at the correct location and rotation
+        cannonParticles[firingPointIndex].Play();
         fireCD = 5f; // resets the fire cooldown
         InvokeRepeating("ShootingCooldown", 0f, 0.1f); // starts the cooldown method
     }
