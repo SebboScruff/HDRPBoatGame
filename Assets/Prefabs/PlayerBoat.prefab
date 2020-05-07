@@ -782,6 +782,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   volumeAnchorOverride: {fileID: 0}
   antialiasing: 0
+  SMAAQuality: 2
   dithering: 0
   stopNaNs: 0
   physicalParameters:
@@ -2353,8 +2354,10 @@ MonoBehaviour:
   cannonballPrefab: {fileID: 5994209949947799839, guid: 1b98c0e1723144d43a8ce12717a889cc,
     type: 3}
   fireCD: 5
+  cannonNoise: {fileID: 8300000, guid: 2fecf0eda4ef28149bcef1e74a22a3d2, type: 3}
   lootAmount: 0
   treasureChestPrefab: {fileID: 0}
+  flotsamPrefab: {fileID: 0}
   currentHP: 0
   maxHP: 100
   currentLives: 0

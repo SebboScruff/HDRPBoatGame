@@ -24,7 +24,6 @@ public class BoatMovement : MonoBehaviour
     public Transform[] firingPoints = new Transform[2];
     public GameObject cannonballPrefab;
     public float fireCD;
-    public AudioClip cannonNoise;
 
     [Header("Loot Variables")]
     public int lootAmount;
@@ -54,7 +53,7 @@ public class BoatMovement : MonoBehaviour
     }
 
     public void Shoot(int firingPointIndex)
-    { 
+    {
         Instantiate(cannonballPrefab, firingPoints[firingPointIndex].position, firingPoints[firingPointIndex].rotation); // spawns a cannonball at the correct location and roation
         fireCD = 5f; // resets the fire cooldown
         InvokeRepeating("ShootingCooldown", 0f, 0.1f); // starts the cooldown method
