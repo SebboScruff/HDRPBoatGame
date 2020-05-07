@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BoatMovement : MonoBehaviour
 {
-    //WIND MANAGER VARIABLES
+    [Header("Wind Manager Variables")]
     float angleToWind;
 
     public GameObject windManager;
     public WindManager windManagerScript;
 
-    //SPEED VARIABLES
+    [Header("Speed Variables")]
     [Range(1, 50)]
     public float turnSpeed; 
     private float sailSetting = 1f;
@@ -20,17 +20,18 @@ public class BoatMovement : MonoBehaviour
         set { sailSetting = value; }
     }
 
-    // SHOOTING VARIABLES
+    [Header("Shooting Variables")]
     public Transform[] firingPoints = new Transform[2];
     public GameObject cannonballPrefab;
     public float fireCD;
+    public AudioClip cannonNoise;
 
-    // LOOT VARIABLES
+    [Header("Loot Variables")]
     public int lootAmount;
     public GameObject treasureChestPrefab;
     public GameObject flotsamPrefab;
 
-    //HP VARIABLES
+    [Header("HP Variables")]
     public float currentHP;
     public float maxHP;
 
@@ -40,7 +41,6 @@ public class BoatMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //windManager = 
         windManagerScript = windManager.GetComponent<WindManager>();
     }
 
