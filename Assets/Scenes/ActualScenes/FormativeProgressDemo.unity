@@ -2963,7 +2963,7 @@ PrefabInstance:
     - target: {fileID: 6474190262664941875, guid: a9345a485378010478b72c4934ce6d0a,
         type: 3}
       propertyPath: stormChance
-      value: 25
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6474190262664941875, guid: a9345a485378010478b72c4934ce6d0a,
         type: 3}

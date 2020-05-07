@@ -16,7 +16,14 @@ public class BoatMovement : MonoBehaviour
 
     [Header("Speed Variables")]
     [Range(1, 50)]
-    public float turnSpeed;
+    [SerializeField]private float turnSpeed;
+    public float TurnSpeed
+    {
+        get { return turnSpeed; }
+        set { turnSpeed = value; }
+    }
+
+
     private float sailSetting = 1f;
     public float SailSetting
     {

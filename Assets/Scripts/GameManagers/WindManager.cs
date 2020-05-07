@@ -48,7 +48,7 @@ public class WindManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("ChangeWind", 0f, windChangeRate); // repeatedly calls the method to change the wind speed and direction every minute or so
+        InvokeRepeating("ChangeWind", 0f, WindChangeRate); // repeatedly calls the method to change the wind speed and direction every minute or so
     }
 
     // Update is called once per frame

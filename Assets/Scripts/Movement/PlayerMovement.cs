@@ -46,8 +46,8 @@ public class PlayerMovement : BoatMovement // since the player is a boat the pla
     {
         // the manual movement on the player is called before the base update so that the player goes where they want with no delay
         //movement controls
-        transform.eulerAngles += new Vector3(0f, Input.GetAxisRaw("Horizontal"), 0f) * turnSpeed * Time.deltaTime; // standard A/D rotatation controls 
-        steeringWheel.transform.localEulerAngles += new Vector3(0f, 0f, Input.GetAxisRaw("Horizontal")) * turnSpeed * Time.deltaTime; // steering wheel animation
+        transform.eulerAngles += new Vector3(0f, Input.GetAxisRaw("Horizontal"), 0f) * TurnSpeed * Time.deltaTime; // standard A/D rotatation controls 
+        steeringWheel.transform.localEulerAngles += new Vector3(0f, 0f, Input.GetAxisRaw("Horizontal")) * TurnSpeed * Time.deltaTime; // steering wheel animation
 
         base.Update(); // this is just the basic boat movement from the parent class
         playerGroup.transform.position = transform.position; // ensure the player group (including the camera focus and wind arrow) is always in the same place as the boat
