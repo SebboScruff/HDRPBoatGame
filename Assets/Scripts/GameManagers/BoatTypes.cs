@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Boats
+public enum Boats // simple enum for the purposes of collision detections, causing different behaviours based on which boat collides
 {
     PLAYER,
     ENEMY_1,
@@ -11,5 +11,5 @@ public enum Boats
 
 public class BoatTypes : MonoBehaviour
 {
-    public Boats boatType;
+    public Boats boatType; // initialize the enum in a class
 }

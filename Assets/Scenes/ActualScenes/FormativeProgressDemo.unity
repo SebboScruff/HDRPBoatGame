@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: {fileID: 731986393}
-  cloudMoveSpeed: 1
+  cloudMoveSpeed: 0.4
 --- !u!82 &731986396
 AudioSource:
   m_ObjectHideFlags: 0

@@ -30,10 +30,20 @@ public class WindManager : MonoBehaviour
     public float maxWindSpeed = 20f;
 
     [Range(30, 90)]
-    public int windChangeRate = 60;
+    private int windChangeRate = 60;
+    public int WindChangeRate
+    {
+        get { return windChangeRate; }
+        set { windChangeRate = value; }
+    }
 
     // Storm Variables
-    public bool isStormHappening = false;
+    private bool isStormHappening = false;
+    public bool IsStormHappening
+    {
+        get { return isStormHappening; }
+        set { isStormHappening = value; }
+    }
 
     public int minStormSpeed = 20;
     public int maxStormSpeed = 50;
@@ -41,31 +51,27 @@ public class WindManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("ChangeWind", 0f, windChangeRate);
+        InvokeRepeating("ChangeWind", 0f, windChangeRate); // repeatedly calls the method to change the wind speed and direction every minute or so
     }
 
     // Update is called once per frame
     void Update()
     {
-        /*if(transform.eulerAngles != newWindAngle)
-        {
-            transform.eulerAngles += (newWindAngle - transform.eulerAngles) / 1200f;
-        }*/
-        transform.eulerAngles = newWindAngle; // [DEBUG VERSION]
+        transform.eulerAngles = newWindAngle;
 
         // UI Stuff
-        Vector3 indicatorRotation = new Vector3(0f, 0f, -transform.eulerAngles.y);
-        windIndicator.transform.eulerAngles = indicatorRotation;
-        windText.text = "Wind: " + windSpeed.ToString("0.0") + " knots";
+        Vector3 indicatorRotation = new Vector3(0f, 0f, -transform.eulerAngles.y); // sets a rotation vector for the UI wind direction indicator
+        windIndicator.transform.eulerAngles = indicatorRotation; // applies the rotation to the UI object
+        windText.text = "Wind: " + windSpeed.ToString("0.0") + " knots"; // displays the current wind speed as text on the UI
 
         transform.position = relocator.transform.position; // keeps the arrow in the same place relative to the boat
     }
 
     void ChangeWind()
     {
-        targetAngle = Random.Range(-179, 180);
-        windSpeed = Random.Range(minWindSpeed, maxWindSpeed);
-        newWindAngle = new Vector3(0f, targetAngle, 0f);
-        Vector3 change = (newWindAngle - transform.eulerAngles) / 10f;
+        targetAngle = Random.Range(-179, 180); // sets a target angle anywhere within a full circle
+        windSpeed = Random.Range(minWindSpeed, maxWindSpeed); // sets the new wind speed to be a random float within the allocated range
+        newWindAngle = new Vector3(0f, targetAngle, 0f); // sets the new wind angle to be a random float within the allocated range
+        Vector3 change = (newWindAngle - transform.eulerAngles) / 10f; // ***UNUSED***
     }
 }

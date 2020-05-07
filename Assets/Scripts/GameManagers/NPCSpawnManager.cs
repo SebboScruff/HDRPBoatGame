@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+                //          ***UNUSED***
+
 public class NPCSpawnManager : MonoBehaviour
 {
     public GameObject[] npcBoats = new GameObject[2];

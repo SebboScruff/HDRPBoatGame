@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/* This is the base class for all boat movement:
+ * Using the wind angle on the WindManager GameObject,
+ * boat velocities are determined and all boats are
+ * translated based on their own velocity.
+ */
 public class BoatMovement : MonoBehaviour
 {
     [Header("Wind Manager Variables")]
-    float angleToWind;
+    float angleToWind; // prepares a variable to determine the boat's relative angle to the wind
 
     public GameObject windManager;
     public WindManager windManagerScript;
 
     [Header("Speed Variables")]
     [Range(1, 50)]
-    public float turnSpeed; 
+    public float turnSpeed;
     private float sailSetting = 1f;
     public float SailSetting
     {
@@ -21,7 +25,7 @@ public class BoatMovement : MonoBehaviour
     }
 
     [Header("Shooting Variables")]
-    public Transform[] firingPoints = new Transform[2];
+    public Transform[] firingPoints = new Transform[2]; // an array of transforms is used to show how many possible firing points a boat has
     public GameObject cannonballPrefab;
     public float fireCD;
 
@@ -52,9 +56,9 @@ public class BoatMovement : MonoBehaviour
         transform.Translate(Vector3.forward * (sailSetting * windManagerScript.WindSpeed * (1 + (Mathf.Cos(angleToWind))) * Time.deltaTime)); // constantly moves the player boat forwards relative to their angle to the wind
     }
 
-    public void Shoot(int firingPointIndex)
+    public void Shoot(int firingPointIndex) // takes in an int which corresponds to an element in that boats Transform[] of firing points
     {
-        Instantiate(cannonballPrefab, firingPoints[firingPointIndex].position, firingPoints[firingPointIndex].rotation); // spawns a cannonball at the correct location and roation
+        Instantiate(cannonballPrefab, firingPoints[firingPointIndex].position, firingPoints[firingPointIndex].rotation); // spawns a cannonball at the correct location and rotation
         fireCD = 5f; // resets the fire cooldown
         InvokeRepeating("ShootingCooldown", 0f, 0.1f); // starts the cooldown method
     }
@@ -74,13 +78,13 @@ public class BoatMovement : MonoBehaviour
     }
 
 
-    public virtual void Die()
+    public virtual void Die() // this method is virtual so it can be overridden in the player script - all boats other than the player will instantly be destroyed, the player will just reset its location
     {
-        for(int i = 1; i <= lootAmount; i++)
+        for(int i = 1; i <= lootAmount; i++) // drops as much loot as that boat was carrying
         {
             Instantiate(treasureChestPrefab, transform.position, transform.rotation);
         }
-        for(int i = 0; i < Random.Range(1,4); i++)
+        for(int i = 0; i < Random.Range(1,4); i++) // drops a random amount of flotsam
         {
             Instantiate(flotsamPrefab, transform.position, transform.rotation);
         }
@@ -89,7 +93,7 @@ public class BoatMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider coll)
     {
-        if(coll.gameObject.tag == "Chest")
+        if(coll.gameObject.tag == "Chest") // all boats are able to pick up treasure, so all boats can drop treasure
         {
             lootAmount++;
             Destroy(coll.gameObject);
